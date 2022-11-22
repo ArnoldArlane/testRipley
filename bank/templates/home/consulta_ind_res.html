@@ -1,0 +1,6 @@
+{% if cue %}
+  Hola {{cli.nombres}},
+  tu saldo es: $ {{cue.saldo}}
+{% else %}
+	<b style="color: red;">No existe una cuenta con el numero de RUT ingresado</b>
+{% endif %}

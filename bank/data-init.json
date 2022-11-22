@@ -1,0 +1,252 @@
+{
+    "clientes": [
+        {
+            "id": 1,
+            "fecha_registro": "2022-11-19",
+            "nombres": "Daniel",
+            "apellidos": "Sexton",
+            "rut": "11932367-3",
+            "celular": "1",
+            "email": "a"
+        },
+        {
+            "id": 2,
+            "fecha_registro": "2022-11-19",
+            "nombres": "Cody",
+            "apellidos": "Brewer",
+            "rut": "9315683-8",
+            "celular": "2",
+            "email": "b"
+        },
+        {
+            "id": 3,
+            "fecha_registro": "2022-11-19",
+            "nombres": "Julie",
+            "apellidos": "Hoffman",
+            "rut": "24526950-1",
+            "celular": "3",
+            "email": "c"
+        },
+        {
+            "id": 4,
+            "fecha_registro": "2022-11-19",
+            "nombres": "Jason",
+            "apellidos": "Schmidt",
+            "rut": "9093616-6",
+            "celular": "4",
+            "email": "d"
+        },
+        {
+            "id": 5,
+            "fecha_registro": "2022-11-19",
+            "nombres": "Charles",
+            "apellidos": "Miller",
+            "rut": "19195286-3",
+            "celular": "5",
+            "email": "e"
+        },
+        {
+            "id": 6,
+            "fecha_registro": "2022-11-19",
+            "nombres": "Alex",
+            "apellidos": "Bradley",
+            "rut": "19165581-8",
+            "celular": "6",
+            "email": "f"
+        },
+        {
+            "id": 7,
+            "fecha_registro": "2022-11-19",
+            "nombres": "Taylor",
+            "apellidos": "Ferrell",
+            "rut": "5747178-6",
+            "celular": "7",
+            "email": "g"
+        },
+        {
+            "id": 8,
+            "fecha_registro": "2022-11-19",
+            "nombres": "Donald",
+            "apellidos": "Sanchez",
+            "rut": "15184212-7",
+            "celular": "8",
+            "email": "h"
+        },
+        {
+            "id": 9,
+            "fecha_registro": "2022-11-19",
+            "nombres": "Lindsey",
+            "apellidos": "Bradford",
+            "rut": "11535802-2",
+            "celular": "9",
+            "email": "i"
+        },
+        {
+            "id": 10,
+            "fecha_registro": "2022-11-19",
+            "nombres": "Bruce",
+            "apellidos": "Barnes",
+            "rut": "11406952-3",
+            "celular": "10",
+            "email": "j"
+        }
+    ],
+
+    "cuentas_bancarias": [
+        {
+            "id": 1,
+            "numero_cuenta": "0001256001",
+            "codigo_cliente": 1,
+            "moneda": "pesos",
+            "saldo": 1000000.00
+        },
+        {
+            "id": 2,
+            "numero_cuenta": "0001256002",
+            "codigo_cliente": 2,
+            "moneda": "pesos",
+            "saldo": 300000.00
+        },
+        {
+            "id": 3,
+            "numero_cuenta": "0001256003",
+            "codigo_cliente": 3,
+            "moneda": "pesos",
+            "saldo": 700000.00
+        },
+        {
+            "id": 4,
+            "numero_cuenta": "0001256004",
+            "codigo_cliente": 4,
+            "moneda": "pesos",
+            "saldo": 800000.00
+        },
+        {
+            "id": 5,
+            "numero_cuenta": "0001256005",
+            "codigo_cliente": 5,
+            "moneda": "pesos",
+            "saldo": 7000000.00
+        },
+        {
+            "id": 6,
+            "numero_cuenta": "0001256006",
+            "codigo_cliente": 6,
+            "moneda": "pesos",
+            "saldo": 10000000.00
+        },
+        {
+            "id": 7,
+            "numero_cuenta": "0001256007",
+            "codigo_cliente": 7,
+            "moneda": "pesos",
+            "saldo": 900000.00
+        },
+        {
+            "id": 8,
+            "numero_cuenta": "0001256008",
+            "codigo_cliente": 8,
+            "moneda": "pesos",
+            "saldo": 50000000.00
+        },
+        {
+            "id": 9,
+            "numero_cuenta": "0001256009",
+            "codigo_cliente": 9,
+            "moneda": "pesos",
+            "saldo": 200000.00
+        },
+        {
+            "id": 10,
+            "numero_cuenta": "0001256010",
+            "codigo_cliente": 10,
+            "moneda": "pesos",
+            "saldo": 400000.00
+        }
+    ],
+
+    "tipo_transaccion": [
+        {
+            "id": 1,
+            "descripcion": "ingreso"
+        },
+        {
+            "id": 2,
+            "descripcion": "salida"
+        }
+    ],
+
+    "transaccion":[
+        {
+            "id": 1,
+            "cuenta_bancaria": 1,
+            "origen": "cuenta sueldo",
+            "tipo_transaccion": 1,
+            "monto_transaccion": 1000000.00
+        },
+        {
+            "id": 2,
+            "cuenta_bancaria": 2,
+            "origen": "cuenta sueldo",
+            "tipo_transaccion": 1,
+            "monto_transaccion": 300000.00
+        },
+        {
+            "id": 3,
+            "cuenta_bancaria": 3,
+            "origen": "cuenta sueldo",
+            "tipo_transaccion": 1,
+            "monto_transaccion": 700000.00
+        },
+        {
+            "id": 4,
+            "cuenta_bancaria": 4,
+            "origen": "cuenta sueldo",
+            "tipo_transaccion": 1,
+            "monto_transaccion": 800000.00
+        },
+        {
+            "id": 5,
+            "cuenta_bancaria": 5,
+            "origen": "cuenta sueldo",
+            "tipo_transaccion": 1,
+            "monto_transaccion": 7000000.00
+        },
+        {
+            "id": 6,
+            "cuenta_bancaria": 6,
+            "origen": "cuenta sueldo",
+            "tipo_transaccion": 1,
+            "monto_transaccion": 10000000.00
+        },
+        {
+            "id": 7,
+            "cuenta_bancaria": 7,
+            "origen": "cuenta sueldo",
+            "tipo_transaccion": 1,
+            "monto_transaccion": 900000.00
+        },
+        {
+            "id": 8,
+            "cuenta_bancaria": 8,
+            "origen": "cuenta sueldo",
+            "tipo_transaccion": 1,
+            "monto_transaccion": 50000000.00
+        },
+        {
+            "id": 9,
+            "cuenta_bancaria": 9,
+            "origen": "cuenta sueldo",
+            "tipo_transaccion": 1,
+            "monto_transaccion": 200000.00
+        },
+        {
+            "id": 10,
+            "cuenta_bancaria": 10,
+            "origen": "cuenta sueldo",
+            "tipo_transaccion": 1,
+            "monto_transaccion": 400000.00
+        }
+    ]
+   
+}

@@ -1,0 +1,103 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Consulta Saldo {% endblock %} 
+
+{% block body_class %} consulta_saldo {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  {% include 'includes/navigation-transparent.html' %}
+
+  <header class="bg-gradient-dark">
+    <div class="page-header min-vh-75" style="background-image: url('{{ ASSETS_ROOT }}/img/bg9.jpg');">
+      <span class="mask bg-gradient-dark opacity-6"></span>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mx-auto my-auto">
+            <h1 class="text-white">Banca por Internet.</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
+    <!-- Section with four info areas left & one card right with image and waves -->
+    <section class="py-7">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <section>
+
+              <h3 class="text-center">{{title}}</h3>
+              <form onsubmit="return false;" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="input-group input-group-dynamic mb-6">
+                        <label class="form-label">RUT:</label>
+                        <input class="form-control" id="rut_i" name="rut_i" aria-label="RUT" type="text" >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-check form-switch mb-4 d-flex align-items-center">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked="">
+                        <label class="form-check-label ms-3 mb-0" for="flexSwitchCheckDefault">I agree to the <a href="javascript:;" class="text-dark"><u>Terms and Conditions</u></a>.</label>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <button type="button" onclick="consultar_saldo(rut_i.value);" class="btn bg-gradient-dark w-100">Consultar</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="row">
+                <div class="col-md-12" id="check_checkbox">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12" id="resultado_consulta">
+                  Resultado de la consulta
+                </div>
+              </div>
+
+            </section>
+          </div>
+          <div class="col-lg-4 ms-auto mt-lg-0 mt-4">
+            <div class="card">
+              <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <a class="d-block blur-shadow-image">
+                  <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="img-colored-shadow" class="img-fluid border-radius-lg">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END Section with four info areas left & one card right with image and waves -->
+    
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+  <script>
+    if (document.getElementsByClassName('page-header')) {
+      window.onscroll = debounce(function() {
+        var scrollPosition = window.pageYOffset;
+        var bgParallax = document.querySelector('.page-header');
+        var oVal = (window.scrollY / 3);
+        bgParallax.style.transform = 'translate3d(0,' + oVal + 'px,0)';
+      }, 6);
+    }
+  </script>
+
+{% endblock javascripts %}

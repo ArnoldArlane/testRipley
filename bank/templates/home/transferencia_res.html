@@ -1,0 +1,23 @@
+{% if succ_trans %}
+  <p><strong>Hola {{o_cue_o.codigo_cliente.nombres}} {{o_cue_o.codigo_cliente.apellidos}},</strong></p><br>
+  <p>Realizaste una transferencia exitosa:</p><br>
+  <p><strong>Cuenta Origen:</strong> {{cue_o}}</p><br>
+  <p><strong>Cuenta Destino:</strong> {{cue_d}}</p><br>
+  <p><strong>Monto transferido:</strong> {{mon_t}}</p><br>
+  <p><strong>Tu saldo es: </strong>$ {{o_cue_o.saldo}}</p><br>
+  <p>Puede descargar su comprobante del siguiente enlace:
+    <strong><a rel="alternate" href="{{ ASSETS_ROOT }}/img/{{dir_archivo}}" title="comprobante" download><em class="fa fa-file-pdf-o"></em></a></strong>
+  </p><br>
+{% else %}
+  {% if msj_cue_o %}
+    <b style="color: red;">{{msj_cue_o}}</b>
+    <br><br>
+  {% endif %}
+  {% if msj_cue_d %}
+    <b style="color: red;">{{msj_cue_d}}</b>
+    <br><br>
+  {% endif %}
+  {% if msj_mon_t %}
+    <b style="color: red;">{{msj_mon_t}}</b>
+  {% endif %}
+{% endif %}

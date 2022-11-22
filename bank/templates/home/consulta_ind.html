@@ -1,0 +1,105 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Consulta Indicadores {% endblock %} 
+
+{% block body_class %} consulta_indicadores {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  {% include 'includes/navigation-transparent.html' %}
+
+  <header class="bg-gradient-dark">
+    <div class="page-header min-vh-75" style="background-image: url('{{ ASSETS_ROOT }}/img/bg9.jpg');">
+      <span class="mask bg-gradient-dark opacity-6"></span>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mx-auto my-auto">
+            <h1 class="text-white">Banca por Internet.</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
+    <!-- Section with four info areas left & one card right with image and waves -->
+    <section class="py-7">
+      <div class="container">
+        <div class="row align-items-center">
+          <h3 style="text-align: center;">Fecha: {{today_f}}</h3>
+          <div class="col-lg-9 mx-auto py-3">
+            <div class="row">
+              <div class="col-md-4 position-relative">
+                <div class="p-3 text-center">
+                  <h1 class="text-gradient text-primary"><span id="state1" countto="{{val_ind_dol}}">{{val_ind_dol}}</span></h1>
+                  <h5 class="mt-3"><em class="fa fa-usd"></em> DOLAR</h5>
+                </div>
+                <hr class="vertical dark">
+              </div>
+              <div class="col-md-4 position-relative">
+                <div class="p-3 text-center">
+                  <h1 class="text-gradient text-primary"> <span id="state2" countto="{{val_ind_utm}}">{{val_ind_utm}}</span></h1>
+                  <h5 class="mt-3"><em class="fa fa-usd"></em> UTM</h5>
+                </div>
+                <hr class="vertical dark">
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 text-center">
+                  <h1 class="text-gradient text-primary" id="state3" countto="{{val_ind_utm}}">{{val_ind_uf}}</h1>
+                  <h5 class="mt-3"><em class="fa fa-usd"></em> UF</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END Section with four info areas left & one card right with image and waves -->
+    
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+  <!-- <script type="text/javascript">
+    if (document.getElementById('state1')) {
+      const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+      if (!countUp.error) {
+        countUp.start();
+      } else {
+        console.error(countUp.error);
+      }
+    }
+    if (document.getElementById('state2')) {
+      const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+      if (!countUp1.error) {
+        countUp1.start();
+      } else {
+        console.error(countUp1.error);
+      }
+    }
+    if (document.getElementById('state3')) {
+      const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+      if (!countUp2.error) {
+        countUp2.start();
+      } else {
+        console.error(countUp2.error);
+      };
+    }
+  </script> -->
+  <script>
+    if (document.getElementsByClassName('page-header')) {
+      window.onscroll = debounce(function() {
+        var scrollPosition = window.pageYOffset;
+        var bgParallax = document.querySelector('.page-header');
+        var oVal = (window.scrollY / 3);
+        bgParallax.style.transform = 'translate3d(0,' + oVal + 'px,0)';
+      }, 6);
+    }
+  </script>
+
+{% endblock javascripts %}
