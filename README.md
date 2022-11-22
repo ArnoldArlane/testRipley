@@ -29,7 +29,7 @@ Construya una página web que permita realizar 3 acciones:
 
 ```bash
 $ git clone https://github.com/ArnoldArlane/testRipley.git
-$ cd challenge_ripley
+$ cd testRipley-main
 ```
 
 <br />
